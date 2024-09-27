@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+  }
+  
+  .container {
+    display: grid;
+    grid-template-areas:
+      "header"
+      "content"
+      "signup"
+      "feature1"
+      "feature2"
+      "feature3";
+    grid-template-columns: 1fr;
+    gap: 10px;
+    width: 90%;
+  }
+  
+  .header {
+    grid-area: header;
+    background-color: #95c1cf;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .content {
+    grid-area: content;
+    background-color: #dcd0d0;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .signup {
+    grid-area: signup;
+    background-color: #d6edf4;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .feature {
+    background-color: #e39de3;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .feature1 {
+    background-color: #fba65c;
+  }
+  
+  .feature2 {
+    background-color: #e7a1e7;
+  }
+  
+  .feature3 {
+    background-color: #fe7777;
+  }
+  
+  
+  @media(min-width: 768px) {
+    .container {
+      grid-template-areas:
+        "header header"
+        "content content"
+        "signup feature1"
+        "feature2 feature3";
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  
+  @media(min-width: 1024px) {
+    .container {
+      grid-template-areas:
+        "header header header"
+        "feature1 feature2 feature3"
+        "signup signup signup"
+        "content content content";
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
